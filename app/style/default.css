@@ -1,0 +1,78 @@
+.calculator {
+    display: inline-block;
+    background-color: black;
+    height: 240px;
+    width: 208px;
+}
+
+.display {
+    background-color: #DDDDDD;
+    border: 1px solid black;
+    font-family: monospace;
+    font-size: 27px;
+    font-weight: bold;
+    height: 30px;
+    padding: 0 4px;
+    text-align: right;
+    width: 198px;
+    overflow: hidden;
+}
+
+.keyboard {
+    overflow: hidden;
+    width: 156px;
+    display: inline-block;
+}
+
+.digitKey {
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    border: 1px solid black;
+    line-height: 50px;
+    text-align: center;
+    background-color: #AABBCC;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 33px;
+}
+
+.equalSignKey {
+    border:1px solid black;
+    width: 102px;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    background-color: #AACCBB;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 33px;
+}
+
+.operations {
+    overflow: hidden;
+    width: 52px;
+    height:208px;
+    display: inline-block;
+}
+
+.operationKey {
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    border: 1px solid black;
+    line-height: 50px;
+    text-align: center;
+    background-color: #CCAABB;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 33px;
+}
+
+.digitKey:hover, .equalSignKey:hover, .operationKey:hover {
+    opacity: 0.8;
+}
+.digitKey:active, .equalSignKey:active, .operationKey:active {
+    opacity: 0.7;
+}
