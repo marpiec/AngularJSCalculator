@@ -1,12 +1,16 @@
 <div class="calculator">
     <div class="display">{{ displayValue }}</div>
-    <div class="keyboard">
+    <div class="digitsKeyboard">
         <div class="digitKey" ng-repeat="key in digitKeys" ng-click="digitClicked(key.value)">
             {{ key.label }}
-        </div><div class="equalSignKey" ng-click="compute()">
+        </div>
+        <div class="equalSignKey" ng-click="compute()">
             {{ equalSignKey.label }}
         </div>
-    </div><div class="operations">
-        <div class="operationKey" ng-repeat="key in operationKeys" ng-click="operationClicked(key.operation)">{{ key.label }}</div>
+    </div>
+    <div class="operationsKeyboard">
+        <div class="operationKey" ng-repeat="key in operationKeys" ng-click="operationClicked(key.operation)">
+            {{ key.label }}
+        </div>
     </div>
 </div>

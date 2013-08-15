@@ -23,8 +23,8 @@ app.controller("CalculatorController", function ($scope) {
 
     // calculator state
     $scope.displayValue = 0;                    //current value displayed on calculator screen
-    $scope.valueA = 0;                          //first value for given operation
-    $scope.valueB = 0;                          //second value for given operation
+    $scope.valueA = 0;                          //first (left) value that will be used for computation
+    $scope.valueB = 0;                          //second (right) value that will be used for computation
     $scope.selectedOperation = null;            //last operation selected by user
     $scope.clearValue = true;                   //should value displayed on screen be cleared after new digit pressed?
 
@@ -82,9 +82,11 @@ app.controller("CalculatorController", function ($scope) {
      * and current result should be treated as first value for next operation.
      */
     $scope.compute = function () {
-        $scope.displayValue = Math.floor($scope.selectedOperation($scope.valueA, $scope.valueB));
-        $scope.clearValue = true;
-        $scope.valueA = $scope.displayValue;
+        if($scope.selectedOperation!=null) {
+            $scope.displayValue = Math.floor($scope.selectedOperation($scope.valueA, $scope.valueB));
+            $scope.clearValue = true;
+            $scope.valueA = $scope.displayValue;
+        }
     }
 
 });
